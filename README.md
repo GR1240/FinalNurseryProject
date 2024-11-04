@@ -55,3 +55,15 @@ mv "Human Friends.txt" NewDirectory/
 # Проверяем результат
 ls NewDirectory/
 ```
+
+> `Задание 3.` Работа с MySQL в Linux. “Установить MySQL на вашу вычислительную машину ”  
+Подключить дополнительный репозиторий MySQL и установить один из пакетов из этого репозитория.
+```bash
+# Добавляем репозиторий MySQL
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
+
+# Устанавливаем MySQL
+sudo apt update
+sudo apt install mysql-server
+```
