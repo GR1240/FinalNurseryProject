@@ -1,3 +1,5 @@
+package model;
+
 import java.util.Date;
 
 class Donkey extends PackAnimal {
