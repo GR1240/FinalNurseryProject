@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-class Animal {
+public abstract class Animal {
     private static int animalCount = 0;
     private String name;
     private Date birthDate;

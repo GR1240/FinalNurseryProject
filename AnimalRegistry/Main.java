@@ -10,45 +10,45 @@ public class Main {
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
+        try (Scanner scanner = new Scanner(System.in)) {
+            boolean exit = false;
 
-        while (!exit) {
-            System.out.println("Меню:");
-            System.out.println("1. Добавить новое животное");
-            System.out.println("2. Вывести список команд животного");
-            System.out.println("3. Обучить животное новой команде");
-            System.out.println("4. Вывести список животных по дате рождения");
-            System.out.println("5. Вывести количество животных");
-            System.out.println("6. Выйти");
-            System.out.print("Выберите опцию: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            while (!exit) {
+                System.out.println("Меню:");
+                System.out.println("1. Добавить новое животное");
+                System.out.println("2. Вывести список команд животного");
+                System.out.println("3. Обучить животное новой команде");
+                System.out.println("4. Вывести список животных по дате рождения");
+                System.out.println("5. Вывести количество животных");
+                System.out.println("6. Выйти");
+                System.out.print("Выберите опцию: ");
+                int choice = scanner.nextInt();
+                scanner.nextLine(); // consume newline
 
-            switch (choice) {
-                case 1:
-                    addAnimal(scanner);
-                    break;
-                case 2:
-                    listAnimalCommands(scanner);
-                    break;
-                case 3:
-                    trainAnimal(scanner);
-                    break;
-                case 4:
-                    listAnimalsByBirthDate();
-                    break;
-                case 5:
-                    System.out.println("Общее количество животных: " + Animal.getAnimalCount());
-                    break;
-                case 6:
-                    exit = true;
-                    break;
-                default:
-                    System.out.println("Неверный выбор, попробуйте снова.");
+                switch (choice) {
+                    case 1:
+                        addAnimal(scanner);
+                        break;
+                    case 2:
+                        listAnimalCommands(scanner);
+                        break;
+                    case 3:
+                        trainAnimal(scanner);
+                        break;
+                    case 4:
+                        listAnimalsByBirthDate();
+                        break;
+                    case 5:
+                        System.out.println("Общее количество животных: " + Animal.getAnimalCount());
+                        break;
+                    case 6:
+                        exit = true;
+                        break;
+                    default:
+                        System.out.println("Неверный выбор, попробуйте снова.");
+                }
             }
-        }
-        scanner.close();
+        } // Scanner автоматически закроется здесь
     }
 
     private static void addAnimal(Scanner scanner) {
