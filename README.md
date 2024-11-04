@@ -44,3 +44,14 @@ ls
 
 ```
 
+> `Задание 2.` Создать новую директорию и переместить туда файл "Human Friends".
+```bash
+# Создаем новую директорию
+mkdir NewDirectory
+
+# Перемещаем файл
+mv "Human Friends.txt" NewDirectory/
+
+# Проверяем результат
+ls NewDirectory/
+```
