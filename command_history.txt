@@ -1,0 +1,44 @@
+ФИО: Газдиев Руслан Б.  
+Дата сдачи: 28.10.2024  
+Номер группы: Программист | будни вечер | 27.01.2024  
+
+История команд:  
+
+  218  cat > Pets.txt << EOF  
+Собаки  
+Кошки  
+Хомяки  
+EOF  
+
+  219  cat > PackAnimals.txt << EOF  
+Лошади  
+Верблюды  
+Ослы  
+EOF  
+
+  220  cat Pets.txt PackAnimals.txt > Animals.txt  
+  221  cat Animals.txt  
+  222  mv Animals.txt "Human Friends.txt"  
+  223  ls  
+  228  cat Human\ Friends.txt   
+  234  mkdir NewDirectory  
+  235  mv "Human Friends.txt" NewDirectory/  
+  236  ls NewDirectory/  
+  237  sudo apt-get update   
+  238  wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb  
+  239  ls -la  
+  240  sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb  
+  241  cd /etc/apt/sources.list.d/  
+  243  ls   
+  244  cat mysql.list   
+  246  sudo apt update  
+  247  sudo apt install mysql-server  
+  248  sudo systemctl status mysql  
+  249  sudo mysql  
+  250  dpkg -l | grep mysql  
+  251  cd ~  
+  258  wget http://security.ubuntu.com/ubuntu/pool/main/h/htop/htop_3.2.2-1_amd64.deb  
+  259  sudo dpkg -i htop_3.2.2-1_amd64.deb   
+  260  htop  
+  261  sudo dpkg -r htop  
+  
