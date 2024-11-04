@@ -67,3 +67,16 @@ sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
 sudo apt update
 sudo apt install mysql-server
 ```
+
+> `Задание 4.` Установить и затем удалить deb-пакет, используя команду `dpkg`.
+
+```bash
+# Скачиваем deb-пакет (например, htop)
+wget http://security.ubuntu.com/ubuntu/pool/main/h/htop/htop_3.2.2-1_amd64.deb
+
+# Устанавливаем пакет
+sudo dpkg -i htop_3.2.2-1_amd64.deb
+
+# Удаляем пакет
+sudo dpkg -r htop
+```
